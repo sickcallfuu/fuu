@@ -1,0 +1,18 @@
+<header>
+	<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>/
+	<div style="float: right;"><img src="/nav/board.svg" alt="whiteboard" width="20"> {{ .Site.Params.subtitle }}</div>
+	<hr>
+
+	<nav>
+		<div class="nav_item"><img src="/nav/scroll-open.svg" alt="scroll" width="16"> <a href="/eldenring/">Elden Ring</a> <div style="float: right;"> 2024-07-23</div></div>
+		<div class="nav_item"><img src="/nav/scroll-open.svg" alt="scroll" width="16"> <a href="/darksouls/">Dark Souls</a> <div style="float: right;">2023-04-02</div></div>
+		<div class="nav_item"><img src="/nav/scroll-open.svg" alt="scroll" width="16"> <a href="/page/comics/">Comics</a> <div style="float: right;">2024-07-23</div></div>
+
+		    {{ with .Site.Menus.main }}
+			{{ range . }}
+			<div class="nav_item"><img src="/nav/scroll-open.svg" alt="scroll" width="16"> <a href="{{ .URL | relURL }}">{{ .Name }}</a></div>
+			{{ end }}
+		</nav>
+	<hr>
+	{{ end }}
+</header>

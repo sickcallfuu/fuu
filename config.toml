@@ -1,0 +1,36 @@
+baseURL = "https://fuu.margot.maison"
+title = "sickcallfuu"
+author = "margot ferrick"
+email = "m@margot.maison"
+languageCode = "en-US"
+
+[params]
+  subtitle = "my fromsoft fanart"
+  dateFmt = "2006-01-02"
+  ShowDatesOnPosts = true
+  mainSections = "post"
+  enableEmoji = true
+  favicon="images/favicon.ico"
+  summaryLength = 70
+  imageCdn = "https://cdn.margot.maison/fuu/"
+
+[params.imagewidth]
+  width = "350"
+[params.imageheight]
+  height = "420"
+
+[pagination]
+  pagersize = 50
+
+[taxonomies]
+  tag = "tags"
+  catergory = "categories"
+
+[outputs]
+  home = ["html","rss"]
+  section = ["html","rss"]
+  taxonomy = ["html","rss"]
+
+[outputFormats.RSS]
+  mediatype = "application/rss"
+  baseName = "index"

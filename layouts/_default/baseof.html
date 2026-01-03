@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+{{ if eq .Type "art" "comics"}}
+{{ partial "art_head.html" . }}
+{{ else }}
+{{ partial "head.html" }}
+
+{{ end }}
+<body>
+	{{ if eq .Type "art" "comics" }}
+	{{ partial "art_header.html" . }}
+	{{ else }}
+	{{ partial "header.html" }}
+
+	{{ end }}
+	<div id="content">
+		{{- block "main" . }}{{- end }}
+	</div>
+	{{- partial "footer.html" . -}}
+</body>
+
+</html>

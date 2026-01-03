@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+{{- partial "head.html" . -}}
+
+<body>
+    {{- partial "header.html" . -}}
+    <ul class="nav">
+        <li><i>{{with site.Params.subtitle}} {{.}}{{end}}</i></li>
+        <ul class="nav">
+            <li><a href="/eldenring/">Elden Ring</a></li>
+            <ul class="nav">
+                <li><a href="/er_r18/">=> R-18</a></li>
+            </ul>
+            <li><a href="/darksouls/">Dark Souls</a></li>
+            <ul class="nav">
+                <li><a href="ds_r18/">=> R-18</a></li>
+            </ul>
+            <li><a href="/comics/">comics</a></li>
+            <li><a href="/post">blog</a></li>
+            <li><a href="/index.xml">rss</a></li>
+        </ul>
+    </ul>
+
+    <p>updates => site: {{ range (where .Site.Pages "Section" "uplog") }} {{ range first 1 .Data.Pages  }} <a href="{{.RelPermalink}}">{{.Date.Format "2006-01-02"}}</a>,{{ end }}{{ end }}  blog: {{ range (where .Site.Pages "Section" "post") }} {{ range first 1 .Data.Pages  }} <a href="{{.RelPermalink}}">{{.Date.Format "2006-01-02"}}</a>.{{ end }}{{ end }}</p>
+    <img src="https://cdn.margot.maison/fuu/images/rog_open_crop.png" width="1032" height="729" alt="cropped image of a rogier and d drawing.">
+
+    <ul class="nav">
+        <li><i>elsewhere</i></li>
+        <ul class="nav">
+            <li><a href="https://www.breakdownpress.com/store/half-gold-half-dung-by-margot-ferrick">Half Gold / Half
+                    Dung</a></li>
+            <li><a href="https://www.pixiv.net/en/users/83480423">pixiv</a></li>
+            <li><a href="https://margot.maison">margot.maison</a></li>
+        </ul>
+    </ul>
+
+    {{- partial "footer.html" . -}}
+</body>
+
+</html>

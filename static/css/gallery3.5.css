@@ -1,0 +1,185 @@
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Layout engine improvements                                                                                         */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/* Make HTML more responsive (adapted from https://github.com/mrmrs/fluidity) */
+img, canvas, iframe, video, svg, select, textarea { max-width: 100%; height: auto; }
+pre { overflow-x: auto; }
+
+/* Box-model fix (adapted from https://css-tricks.com/box-sizing/) */
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Improved typography and prose readability                                                                          */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/* Size text according to screen width (adapted from https://css-tricks.com/molten-leading-css/) */
+/* Min size: 1rem (16px), max size: 1.2rem (19.2px); dynamic size applies between 600px and 1240px. */
+html { font-size: 1.2em;}
+
+/* Improved text layout and spacing (adapted from http://bettermotherfuckingwebsite.com) */
+body { margin: 0 auto; max-width: 100%; padding: 0.5em; }
+p { text-align: justify; hyphens: auto; }
+h1, h2, h3, h4, h5, h6 { margin-top: 1em; margin-bottom: 0.5em; line-height: 1.2; }
+
+/* Improved contrast (adapted from https://jgthms.com/web-design-in-4-minutes/#color-contrast) */
+body { background-color: #f8f7fa; color: #3d3c4f }
+:not(a[href]) b, :not(a[href]) strong, th { color: inherit; }
+
+/* Logarithmic size scale for headings (see https://github.com/waldyrious/downstyler/issues/30) */
+h1 { color: #111; font-size: 200.00%; /* 2^(6/6) */ }
+h2 { color: #222; font-size: 178.18%; /* 2^(5/6) */ }
+h3 { color: #333; font-size: 158.74%; /* 2^(4/6) */ }
+h4 { color: #444; font-size: 141.42%; /* 2^(3/6) */ }
+h5 { color: #555; font-size: 125.99%; /* 2^(2/6) */ }
+h6 { color: #666; font-size: 112.25%; /* 2^(1/6) */ }
+
+/* Use nicer serif fonts, if available */
+body { font-family: 'Times New Roman', Times, serif; }
+
+header {margin-bottom: 1em;}
+hr { margin-top: 3em; border: none; border-top:  #dfd9ec 1px solid;}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Simple table style                                                                                                 */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+table { border-collapse: collapse; }
+th, td { padding-left: .5em; padding-right: 1em; text-align: start; border: 1px solid #ddd; }
+th, thead, tfoot { background: #eee; font-weight: bold; }
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Forms and form inputs (work in progress, see https://github.com/waldyrious/downstyler/issues/5)                    */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+textarea { display: block; width: 100%; }
+input, textarea, select, button { font-family: inherit; font-size: 100%; margin: 0.2em 0; }
+select[size]:not([size="1"]) { vertical-align: top; }
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Images and figures                                                                                                 */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/* Add margins to left- and right-aligned images (https://github.com/waldyrious/downstyler/issues/13) */
+img[align="right"] { margin-left: 1em; }
+img[align="left"] { margin-right: 1em; }
+
+/* Figure captions */
+figcaption { font: inherit; font-size: 75% !important; font-style: italic;}
+
+/* Prevent blowing up SVG images that are meant to be small */
+*[class*="social"] svg, *[class*="icon"] svg, svg[class*="icon"], img[class*="emoji"][src$=".svg"] { max-height: 30px; }
+*[class*="logo" i] svg, *[id*="logo" i] svg { max-width: 100px; }
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Additional adjustments                                                                                             */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/* Softer link colors than the browser defaults */
+a[href], a[href]:visited { color: inherit; }
+
+/* Styles for code-related elements */
+pre, :not(pre) code, kbd, samp, tt { padding: .1em .3em; margin: 0 .1em; font-size: 80%; background: #eee; }
+
+/* Styles for blockquote elements */
+blockquote { font-style:italic; padding-left: 1em; margin-left: 0; border-left: 0px solid #333; color: inherit; }
+
+/* Softer selection color that works over text and links without the color inversion effect */
+::selection { background-color: #aa8383; }
+
+
+
+
+/*card layout*/
+
+.card-layout {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  margin: auto;
+  gap: 0.4em;
+}
+
+.card-layout__item {
+  width: 16em;
+  height: auto;
+  flex-grow: 0;
+  font-style: italic;
+  padding: 0.4em;
+  border: 3px double #8a79ab;
+}
+
+.card-layout__item img {
+  width: auto;
+  height: auto;
+  padding: 0.2em;
+}
+
+.container {
+  max-width: 40em;
+  margin: auto;
+}
+
+.container img {
+  object-fit: contain;
+  margin-bottom: 4em;
+}
+
+.container2 {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img[src$='#center']
+{
+    display: block;
+    margin: 0.7rem auto; /* you can replace the vertical '0.7rem' by
+                            whatever floats your boat, but keep the
+                            horizontal 'auto' for this to work */
+    /* whatever else styles you fancy here */
+}
+
+
+::selection { background-color: #5a5a5a; }
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #223;
+    color: #c9c0bb;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #cfcfc4;
+  }
+  a[href],
+  a[href]:hover,
+  a[href]:visited {
+    color:  #bc8f8f; }
+
+  hr {
+    border: none;
+    border-top:  #645452 1px solid;
+  }
+
+  img.pixel {
+    filter: invert(1) brightness(.8);
+  }
+
+  img {
+    filter: brightness(0.95) contrast(0.95);
+  }
+  .card-layout__item {
+  border: 3px double #645452;
+}
+}
+  
+

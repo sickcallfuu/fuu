@@ -1,0 +1,38 @@
+{{define "main"}}
+{{ $date := .Date.Format "2006-01-02" }}
+{{ $lastmod := .Lastmod.Format "2006-01-02" }}
+<ul>
+    <li>{{ $date }} {{ if ne $lastmod $date }}</li>
+    <ul>
+        <li> → last update {{ .Lastmod.Format "2006-01-02" }} {{ end }}</li>
+    </ul>
+</ul>
+
+<!--$paginator-->
+{{$p := .Pages}}
+{{if .IsHome}}
+{{$p = where site.RegularPages "Type" "in" site.Params.mainSections}}
+{{else if eq .Kind "taxonomy"}}
+{{$p = $p.ByTitle}}
+{{end}}
+{{$paginator := .Paginate $p}}
+
+{{- $imageCdn := .Site.Params.imageCdn -}}
+
+<!--list-->
+<div class="gallery">
+    {{range $paginator.Pages}}
+    <div class="item">
+        <figure><a href="{{.RelPermalink}}"><img src="{{ printf (strings.TrimSuffix "/" $imageCdn) }}{{ .Params.featuredImageExternal}}" width="350" height="450"></a><figcaption><a href="{{.RelPermalink}}">{{.Date.Format "2006-01-02" }} | {{.Title}}</a><p><small>{{ .Params.tags }}</small></p></figcaption>
+        </figure>
+    </div>
+    {{end}}
+</div>
+<!--figure><a href="{{.RelPermalink}}">{{ with .Resources.GetMatch "*.png" }}<img src="https://cdn.margot.maison/fuu{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ .Params.description }}">{{ end }}</a><figcaption><p>{{.Date.Format "2006-01-02" }}| {{.Title}} {{ .Site.Params.imageCdn }}</p></figcaption>
+        </figure>-->
+
+
+<!--pagination-->
+{{template "_internal/pagination.html" .}}
+
+{{end}}
