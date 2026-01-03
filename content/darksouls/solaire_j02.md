@@ -4,6 +4,9 @@ date: 2022-11-06
 lastmod:
 type: art
 categories:
+tags:
+- Solaire-of-Astora
+- Oscar-of-Astora
 rss_ignore: true
 draft: false
 featuredImageExternal: "/darksouls/img/solaire_j02.jpg"

@@ -4,6 +4,8 @@ date: 2022-07-02
 lastmod:
 type: art
 categories:
+tags:
+- Lords-Blade-Ciaran
 rss_ignore: true
 draft: false
 featuredImageExternal: "/darksouls/img/ciaran_july2022_02.png"

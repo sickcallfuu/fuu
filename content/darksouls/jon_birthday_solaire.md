@@ -5,6 +5,8 @@ lastmod:
 type: art
 layout: image
 categories:
+tags:
+- Solaire-of-Astora
 rss_ignore: true
 draft: false
 featuredImageExternal: "/darksouls/img/jon_birthday_solaire.jpg"

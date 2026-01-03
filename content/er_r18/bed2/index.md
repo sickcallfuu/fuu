@@ -12,6 +12,6 @@ rss_ignore: false
 draft: false
 featuredImageExternal: "/er_r18/thumb/bed2.png"
 ---
-{{<img src="/er_r18/img/bed2.png" alt="rogier and d in bed">}}
+{{<img src="/er_r18/bed2.png" alt="rogier and d in bed">}}
 
 ink on paper

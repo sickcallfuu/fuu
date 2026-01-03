@@ -4,6 +4,8 @@ date: 2021-10-10
 lastmod:
 type: art
 categories:
+tags:
+- Solaire-of-Astora
 rss_ignore: true
 draft: false
 featuredImageExternal: "/darksouls/img/solaire_maggot01.jpg"
