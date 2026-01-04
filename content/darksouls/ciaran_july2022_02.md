@@ -8,7 +8,7 @@ tags:
 - Lords-Blade-Ciaran
 rss_ignore: true
 draft: false
-featuredImageExternal: "/darksouls/img/ciaran_july2022_02.png"
+featuredImageExternal: "/darksouls/thumb/ciaran_july2022_02.png"
 ---
 
 {{<img src="/darksouls/img/ciaran_acne.jpg" alt="Ciaran">}}

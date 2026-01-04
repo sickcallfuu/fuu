@@ -3,7 +3,6 @@ title: "Bed II"
 date: 2024-12-25
 lastmod:
 type: "art"
-layout: "image"
 categories:
 tags:
 - Sorcerer-Rogier

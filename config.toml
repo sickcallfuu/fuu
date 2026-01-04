@@ -13,11 +13,8 @@ languageCode = "en-US"
   favicon="images/favicon.ico"
   summaryLength = 70
   imageCdn = "https://cdn.margot.maison/fuu/"
-
-[params.imagewidth]
-  width = "350"
-[params.imageheight]
-  height = "420"
+  staticDir = ['assets', 'static']
+  assetDir = 'assets/'
 
 [pagination]
   pagersize = 50

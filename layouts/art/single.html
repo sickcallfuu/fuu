@@ -1,19 +1,7 @@
 {{define "main"}}
 <main>
-    <p>{{.Title}}</p>
-    {{ $date := .Date.Format "2006-01-02" }}
-    {{ $lastmod := .Lastmod.Format "2006-01-02" }}
-    <ul>
-        <li>{{ $date }} {{ if ne $lastmod $date }}</li>
-        <ul>
-            <li> → last update {{ .Lastmod.Format "2006-01-02" }} {{ end }}</li>
-        </ul>
-    </ul>
-    {{.TableOfContents}}
-    {{.Content}}
-    {{range .Resources.Match "thumb/*.png" }}
-    <img src="{{ .RelPermalink }}"/>
-    {{ end }}
+    <p>{{ .Date.Format "2006-01-02" }}</p>
+    {{.Content}} 
 </main>
 
 {{end}}

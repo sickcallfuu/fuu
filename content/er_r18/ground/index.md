@@ -3,7 +3,6 @@ title: "Ground"
 date: 2025-12-06
 lastmod:
 type: "art"
-layout: "image"
 categories:
 tags:
 - Sorcerer-Rogier
