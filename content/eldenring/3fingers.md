@@ -6,10 +6,9 @@ type: art
 categories:
 rss_ignore: true
 draft: false
-featuredImageExternal: "/eldenring/3fingers.png"
+featuredImageExternal: "/eldenring/thumb/3fingers.png"
 ---
 
-{{<img class="art" src="/eldenring/3fingers.png" alt="3 fingers">}}
+{{<img src="/eldenring/3fingers.png" alt="3 fingers">}}
 
-<p>ink, colored pencil and gouache on paper</p>
-<p><i></i></p>
+ink, colored pencil and gouache on paper

@@ -109,8 +109,27 @@ img[src$='#center']
     /* whatever else styles you fancy here */
 }
 
-
 ::selection { background-color: #5a5a5a; }
+
+@media screen and (width <=50rem) {
+
+  body {
+    padding: 0em 0.6em;
+  }
+
+  header {
+    font-size: large;
+    line-height: 1.8;
+  }
+
+  /*gallery*/
+  .item {
+    max-width: 8em;
+    padding: 0.1em;
+  }
+
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #223;
