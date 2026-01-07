@@ -229,13 +229,8 @@ blockquote {
 }
 
 .item {
-  width: 400px;
-  height: auto;
-}
-
-.item>figure {
-  margin-left: auto;
-  padding: 0.4em;
+  margin: 1em;
+  padding: 0.2em;
 }
 
 .container {
@@ -319,9 +314,5 @@ img[src$='#center'] {
 
   img {
     filter: brightness(0.95) contrast(0.9);
-  }
-
-  .card-layout__item {
-    border: 3px double #645452;
   }
 }
