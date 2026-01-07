@@ -10,7 +10,7 @@ tags:
 # From J. H. Fabre's Life of the Spider
 
 
-{{<figure src="/images/haligtreecocoons2.png" alt="Cocoons hanging from the Brace of Elphael" caption="Cocoons hanging from the Brace of Elphael">}}
+{{< img src="/images/haligtreecocoons2.png" alt="Cocoons hanging from the Brace of Elphael" caption="Cocoons hanging from the Brace of Elphael">}}
 >The little ones are very good: none stirs none tries to get more
 room for himself at his neighbours&#39; expense. What are they doing
 there, so quietly? They allow themselves to be carted about, like

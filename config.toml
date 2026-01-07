@@ -19,6 +19,32 @@ languageCode = "en-US"
 [pagination]
   pagersize = 50
 
+[menus]
+  [[menus.main]]
+    name = 'Elden Ring'
+    pageRef = '/eldenring'
+    weight = 10
+  [[menus.main]]
+    name = '[R-18] Elden Ring'
+    pageRef = '/r18-eldenring'
+    weight = 20
+  [[menus.main]]
+    name = 'Dark Souls'
+    pageRef = '/darksouls'
+    weight = 30
+  [[menus.main]]
+    name = '[R-18] Dark Souls'
+    pageRef = '/r18-darksouls'
+    weight = 40
+  [[menus.main]]
+    name = 'Comics'
+    pageRef = '/comics'
+    weight = 50
+  [[menus.main]]
+    name = 'blog'
+    pageRef = '/post'
+    weight = 60
+
 [taxonomies]
   tag = "tags"
   catergory = "categories"

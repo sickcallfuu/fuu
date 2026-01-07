@@ -1,0 +1,17 @@
+---
+title: "Birthday Drawing"
+date: 2024-08-04
+lastmod:
+type: "art"
+categories:
+tags:
+- Sorcerer-Rogier
+- D-Hunter-of-the-Dead
+rss_ignore: false
+draft: false
+featuredImageExternal: "/er_r18/thumb/birthday2_sat.png"
+description: "pencil, ink and marker on paper"
+---
+{{<img src="/er_r18/birthday2_sat.png">}}
+
+Drawn on my birthday.

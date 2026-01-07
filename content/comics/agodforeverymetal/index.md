@@ -1,0 +1,23 @@
+---
+title: "A God for Every Metal"
+date: 2023-12-20
+lastmod:
+type: comics
+outputs:
+- html
+summary: '12 pages | Elden Ring - Drawn in December 2023 for PLUIE, issue 7 of Lagon Revue (published summer 2024.)'
+rss_ignore: true
+draft: false
+---
+{{<img src="/comics/agodforeverymetal/agodforeverymetal_001.png">}}
+{{<img src="/comics/agodforeverymetal/agodforeverymetal_002.png">}}
+{{<img src="/comics/agodforeverymetal/agodforeverymetal_003.png">}}
+{{<img src="/comics/agodforeverymetal/agodforeverymetal_004.png">}}
+{{<img src="/comics/agodforeverymetal/agodforeverymetal_005.png">}}
+{{<img src="/comics/agodforeverymetal/agodforeverymetal_006.png">}}
+{{<img src="/comics/agodforeverymetal/agodforeverymetal_007.png">}}
+{{<img src="/comics/agodforeverymetal/agodforeverymetal_008.png">}}
+{{<img src="/comics/agodforeverymetal/agodforeverymetal_009.png">}}
+{{<img src="/comics/agodforeverymetal/agodforeverymetal_010.png">}}
+{{<img src="/comics/agodforeverymetal/agodforeverymetal_011.png">}}
+{{<img src="/comics/agodforeverymetal/agodforeverymetal_012.png">}}

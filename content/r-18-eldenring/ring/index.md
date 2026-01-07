@@ -1,0 +1,17 @@
+---
+title: "Ring"
+date: 2025-11-03
+lastmod:
+type: "art"
+categories:
+tags:
+- Sorcerer-Rogier
+- D-Hunter-of-the-Dead
+rss_ignore: false
+draft: false
+featuredImageExternal: "/er_r18/thumb/rog_open.png"
+description: "Clip Studio Paint"
+---
+{{<img src="/er_r18/rog_open.png" alt="ring">}}
+
+Think it's not too crazy to imagine some sorcerer somewhere would have thought of wearing a glintstone nipple ring.
