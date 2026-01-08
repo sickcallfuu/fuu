@@ -13,5 +13,3 @@ featuredImageExternal: "/er_r18/thumb/rog_d_ground.png"
 description: "Clip Studio Paint"
 ---
 {{<img src="/er_r18/rog_d_ground.jpg" alt="ground">}}
-
-Clip Studio Paint

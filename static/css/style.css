@@ -26,19 +26,23 @@ html {
 }
 
 html {
-  font-size: 1.2em;
+  font-size: 1.125em;
 }
 
 /* Improved text layout and spacing (adapted from http://bettermotherfuckingwebsite.com) */
 body {
+  background-color: #f8f7fa;
+  color: #3d3c4f; 
   margin: 0 auto;
   max-width: 100%;
   padding: 0.3em;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 p {
+  max-width: 80em;
+  text-align: justify;
   hyphens: auto;
-  max-width: 40em;
 }
 
 h1,
@@ -52,56 +56,10 @@ h6 {
   line-height: 1.2;
 }
 
-body {
-  background-color: #f8f7fa;
-  color: #3d3c4f
-}
-
 :not(a[href]) b,
 :not(a[href]) strong,
 th {
   color: inherit;
-}
-
-/* Logarithmic size scale for headings (see https://github.com/waldyrious/downstyler/issues/30) */
-h1 {
-  color: #111;
-  font-size: 200.00%;
-  /* 2^(6/6) */
-}
-
-h2 {
-  color: #222;
-  font-size: 178.18%;
-  /* 2^(5/6) */
-}
-
-h3 {
-  color: #333;
-  font-size: 158.74%;
-  /* 2^(4/6) */
-}
-
-h4 {
-  color: #444;
-  font-size: 141.42%;
-  /* 2^(3/6) */
-}
-
-h5 {
-  color: #555;
-  font-size: 125.99%;
-  /* 2^(2/6) */
-}
-
-h6 {
-  color: #666;
-  font-size: 112.25%;
-  /* 2^(1/6) */
-}
-
-body {
-  font-family: 'Times New Roman', Times, serif;
 }
 
 .nav {
@@ -150,7 +108,7 @@ tfoot {
 figure {
   max-width: 100%;
   padding: 0em;
-  margin: auto;
+  margin: 0em;
 }
 
 figcaption {
@@ -172,11 +130,6 @@ img[class*="emoji"][src$=".svg"] {
   max-width: 100px;
 }
 
-/* ------------------------------------------------------------------------------------------------------------------ */
-/* Additional adjustments                                                                                             */
-/* ------------------------------------------------------------------------------------------------------------------ */
-
-/* Softer link colors than the browser defaults */
 a[href],
 a[href]:visited {
   color: inherit;
@@ -250,20 +203,28 @@ blockquote {
   justify-content: center;
 }
 
-img[src$='#center'] {
-  display: block;
-  margin: 0.7rem auto;
-  /* you can replace the vertical '0.7rem' by
-                            whatever floats your boat, but keep the
-                            horizontal 'auto' for this to work */
-  /* whatever else styles you fancy here */
-}
-
 ::selection {
   background-color: #5a5a5a;
 }
 
 @media screen and (width <=50rem) {
+  body {
+    padding: 0em 0.6em;
+  }
+
+  header {
+    font-size: large;
+    line-height: 1.8;
+  }
+
+  /*gallery*/
+  .item {
+    max-width: 10em;
+    padding: 0.1em;
+  }
+}
+
+@media screen and (width <=25rem) {
 
   body {
     padding: 0em 0.6em;
@@ -276,7 +237,7 @@ img[src$='#center'] {
 
   /*gallery*/
   .item {
-    max-width: 8em;
+    max-width: 6.6em;
     padding: 0.1em;
   }
 
