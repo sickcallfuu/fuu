@@ -1,3 +1,3 @@
 <header>
-{{- range .Ancestors.Reverse }} <a href="{{ .RelPermalink }}">{{ .Title }}</a> /{{- end }} <a href="{{ .RelPermalink }}">{{ .Title }}</a> / {{with site.Params.subtitle}} {{.}}{{end}}
+<img class="pixel" src="/images/turtle.png" width="33" height="39">{{- range .Ancestors.Reverse }} <a href="{{ .RelPermalink }}">{{ .Title }}</a> /{{- end }} <a href="{{ .RelPermalink }}">{{ .Title }}</a> / {{with site.Params.subtitle}} {{.}}{{end}}
 </header>

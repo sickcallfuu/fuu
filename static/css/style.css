@@ -64,6 +64,11 @@ th {
 
 .nav {
   list-style-type: none;
+  padding-bottom: 1em;
+}
+
+.date {
+  font-family: monospace;
 }
 
 .pixel {

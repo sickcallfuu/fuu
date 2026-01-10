@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-{{ if eq .Type "art" "comics"}}
-{{ partial "art_head.html" . }}
-{{ else }}
-{{ partial "head.html" }}
+	{{ if eq .Type "art" "comics"}}
+	{{ partial "art_head.html" . }}
+	{{ else }}
+	{{ partial "head.html" }}
+	{{ end }}
 
-{{ end }}
 <body>
 	{{ if eq .Type "art" "comics" }}
 	{{ partial "art_header.html" . }}
@@ -13,9 +13,9 @@
 	{{ partial "header.html" }}
 
 	{{ end }}
-	<div id="content">
+	<main>
 		{{- block "main" . }}{{- end }}
-	</div>
+	</main>
 	{{- partial "footer.html" . -}}
 </body>
 

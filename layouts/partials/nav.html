@@ -1,11 +1,11 @@
 <nav aria-label="Main Navigation">
-    <small><u>last modified</u></small>
     <ul class="nav">
         {{ range .Site.Sections.ByWeight}}
         {{ if not .Params.hidden }}
-        <li>{{ .Lastmod | time.Format "2006-01-02" }} ------ <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        <li><span class="date">{{ .Lastmod | time.Format "2006-01-02" }}</span> ------ <a href="{{ .Permalink }}">{{
+                .Title }}</a></li>
         {{ end }}
         {{ end }}
-        <li><img class="pixel" src="/images/turtle.png" width="33" height="39"> <a href="/index.xml">RSS</a></li>
+        <li><a href="/index.xml">RSS</a></li>
     </ul>
 </nav>
