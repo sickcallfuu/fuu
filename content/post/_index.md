@@ -1,5 +1,7 @@
 ---
 title: blog
-rss_ignore: true
+type: post
+rss_ignore: false
+draft: false
 weight: 10
 ---

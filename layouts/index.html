@@ -5,8 +5,8 @@
 <body>
 
     {{- partial "header.html" . -}}
-    <p>updates => {{ range (where .Site.Pages "Section" "uplog") }} {{ range first 1 .Data.Pages }} <a
-            href="{{.RelPermalink}}">{{.Date.Format "2006-01-02"}}</a>{{ end }}{{ end }}</p>
+    <p>updates => <span class="date">{{ range (where .Site.Pages "Section" "uplog") }} {{ range first 1 .Data.Pages }} <a
+            href="{{.RelPermalink}}">{{.Date.Format "2006-01-02"}}</a>.</span>{{ end }}{{ end }}</p>
     {{- partial "nav.html" . -}}
     
     <img src="https://cdn.margot.maison/fuu/images/rog_open_crop.png" width="1032" height="729"

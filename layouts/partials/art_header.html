@@ -1,3 +1,4 @@
 <header>
-<img class="pixel" src="/images/turtle.png" width="33" height="39">{{- range .Ancestors.Reverse }} <a href="{{ .RelPermalink }}">{{ .Title }}</a> /{{- end }} <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <a href="/"><img class="pixel" src="/images/turtle.png" width="33" height="39"></a>
+    {{ partial "breadcrumbs.html" . }}
 </header>
