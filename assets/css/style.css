@@ -66,8 +66,13 @@ th {
   padding-bottom: 1em;
 }
 
-.date {
+time {
   font-family: monospace;
+}
+
+.postmeta {
+  font-family: monospace;
+  list-style-type: none;
 }
 
 .pixel {
@@ -153,11 +158,6 @@ blockquote {
   color: inherit;
 }
 
-/* Softer selection color that works over text and links without the color inversion effect */
-::selection {
-  background-color: #aa8383;
-}
-
 .home {
   display: flex;
   max-width: 100%;
@@ -189,20 +189,9 @@ blockquote {
   margin: auto;
 }
 
-.container img {
+.container > img {
   max-width: 100%;
   margin-bottom: 4em;
-}
-
-.container2 {
-  max-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-::selection {
-  background-color: #5a5a5a;
 }
 
 @media screen and (width <=50rem) {

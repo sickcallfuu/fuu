@@ -2,7 +2,7 @@
     <ul class="nav">
         {{ range .Site.Sections.ByWeight}}
         {{ if not .Params.hidden }}
-        <li><span class="date">{{ .Lastmod | time.Format "2006-01-02" }}</span> ------ <a href="{{ .Permalink }}">{{
+        <li><time datetime="{{ .Lastmod | time.Format "2006-01-02" }}">{{ .Lastmod | time.Format "2006-01-02" }}</time> ------ <a href="{{ .Permalink }}">{{
                 .Title }}</a></li>
         {{ end }}
         {{ end }}

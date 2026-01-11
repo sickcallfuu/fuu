@@ -1,10 +1,10 @@
 {{define "main"}}
 {{ $date := .Date.Format "2006-01-02" }}
 {{ $lastmod := .Lastmod.Format "2006-01-02" }}
-<ul>
-    <li>{{ $date }} {{ if ne $lastmod $date }}</li>
+<ul class="postmeta">
+    <li><time datetime="{{ $date }}">{{ $date }} {{ if ne $lastmod $date }}</time></li>
     <ul>
-        <li> → last update {{ .Lastmod.Format "2006-01-02" }} {{ end }}</li>
+        <li> → last update <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }} {{ end }}</li>
     </ul>
 </ul>
 

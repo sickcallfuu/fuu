@@ -12,7 +12,7 @@
 <!--list-->
 <ul class="post-list">
     {{range $paginator.Pages}}
-    <li><span class="date">{{.Date.Format "2006-01-02"}} --- </span><a href="{{.RelPermalink}}">{{.Title}}</a>
+    <li><time datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006-01-02"}} --- </time><a href="{{.RelPermalink}}">{{.Title}}</a>
     {{end}}</li>
 </ul>
 

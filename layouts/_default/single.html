@@ -1,9 +1,11 @@
 {{define "main"}}
-<p><= <a href="/post"><i>all posts</i></a>
+
 <h1>{{.Title}}</h1>
-<p>{{.Date.Format "2006-01-02"}}</p>
-<p>category: {{range (.GetTerms "categories")}}<a href="{{.RelPermalink}}">{{.LinkTitle}}</a>, {{end}} </p>
-<p>tags: {{range (.GetTerms "tags")}}<a href="{{.RelPermalink}}">{{.LinkTitle}}</a>, {{end}} </p>
+<time datetime="{{.Date.Format " 2006-01-02"}}">{{.Date.Format "2006-01-02"}}</time>
+<div class="postmeta">
+    <p>category: {{range (.GetTerms "categories")}}<a href="{{.RelPermalink}}">{{.LinkTitle}}</a>, {{end}} </p>
+    <p>tags: {{range (.GetTerms "tags")}}<a href="{{.RelPermalink}}">{{.LinkTitle}}</a>, {{end}} </p>
+</div>
 
 
 <!--TOC-->
@@ -11,5 +13,5 @@
 
 <!--Content-->
 {{.Content}}
-<p><= <a href="/post"><i>all posts</i></a>
+
 {{end}}
