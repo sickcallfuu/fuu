@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 {{- partial "head.html" . -}}
-
 <body>
-
     {{- partial "header.html" . -}}
+    <p>{{ .Site.Params.subtitle }}</p>
     <p>updated <time datetime="{{.Date.Format "2006-01-02"}}">{{ range (where .Site.Pages "Section" "uplog") }} {{ range first 1 .Data.Pages }} <a
             href="{{.RelPermalink}}">{{.Date.Format "2006-01-02"}}</a>.</time>{{ end }}{{ end }}</p>
     {{- partial "nav.html" . -}}
