@@ -9,8 +9,6 @@
     height="{{ .Height }}" {{ end }}{{ end }}>
 </figure>
 
-{{with .PrevInSection}}<p>previous: <i><a href="{{.RelPermalink}}">{{.Title}}</a></i>{{end}} / 
-{{with .NextInSection}}next: <i><a href="{{.RelPermalink}}">{{.Title}}</a></i></p>{{end}}
-
+{{with .NextInSection}}next: <i><a href="{{.RelPermalink}}">{{.Title}}</a></i></p>{{end}} / {{with .PrevInSection}}<p>previous: <i><a href="{{.RelPermalink}}">{{.Title}}</a></i>{{end}}
 
 {{ end }}
