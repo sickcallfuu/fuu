@@ -2,8 +2,6 @@
 <html>
 	{{ if eq .Type "art" "comics" }}
 	{{ partial "arthead.html" . }}
-	{{ else if eq .Type "post" "uplog" }}
-	{{ partial "posthead.html" . }}
 	{{ else }}
 	{{ partial "head.html" . }}
 	{{ end }}
