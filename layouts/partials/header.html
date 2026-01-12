@@ -1,5 +1,9 @@
 <header>
-    <a href="/"><img class="pixel" src="/images/turtle.png" width="33" height="39"></a>
+    {{ with resources.Get "images/turtle.png" }}
+    {{ with .Resize "20x" }}
+      <a href="/"><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"></a>
+    {{ end }}
+    {{ end }}
     {{ partial "breadcrumbs.html" . }}
 
 </header>
