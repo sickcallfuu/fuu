@@ -1,0 +1,19 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<ul>
+    <li>{{ .Params.game }}</li>
+    <li><time datetime="{{.Date.Format " 2006-01-02"}}">{{.Date.Format "2006"}}</time></li>
+    <li>With {{ range .Params.players }}{{ . }}, {{ end }}</li>
+</ul>
+
+{{ .Content }}
+
+{{ range $p := .Pages }}
+{{ with .Resources.GetMatch "**" }}
+{{ $alt := printf "icon: %s" $p.Title }}
+<a href="{{ $p.RelPermalink }}">
+    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="pixel" alt="{{ $alt }}"></a>
+{{ end }}
+{{ end }}
+
+{{ end }}

@@ -1,0 +1,40 @@
+{{define "main"}}
+
+<!--$paginator-->
+{{$p := .Pages}}
+{{if .IsHome}}
+{{$p = where site.RegularPages "Type" "in" site.Params.mainSections}}
+{{else if eq .Kind "taxonomy"}}
+{{$p = $p.ByTitle}}
+{{end}}
+{{$paginator := .Paginate $p}}
+<!--list-->
+{{ with resources.Get .Params.featuredImageExternal }}
+<img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+{{ end }}
+{{ .Content }}
+<div class="flex">
+  {{range $paginator.Pages}}
+  <div class="flex-item">
+    <a href="{{.RelPermalink}}">{{ with resources.Get .Params.featuredImageExternal }}<img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="pixel2"></a>
+    {{ end }}
+    <ul>
+      <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+      <li>{{ .Params.game }}</li>
+      <li><time datetime="{{.Date.Format " 2006-01-02"}}">{{.Date.Format "2006"}}</time></li>
+      <li>{{ .Summary }}</li>
+      <li>With:
+        <ul>
+          {{ range .Params.players }}
+          <li>{{ . }}</li>{{ end }}
+        </ul>
+      </li>
+    </ul>
+  </div>
+  {{end}}
+</div>
+
+<!--pagination-->
+{{template "_internal/pagination.html" .}}
+
+{{end}}

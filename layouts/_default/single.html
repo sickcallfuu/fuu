@@ -13,5 +13,7 @@
 
 <!--Content-->
 {{.Content}}
+{{with .PrevInSection}}<p>previous: <i><a href="{{.RelPermalink}}">{{.Title}}</a></i>{{end}} / 
+{{with .NextInSection}}next: <i><a href="{{.RelPermalink}}">{{.Title}}</a></i></p>{{end}}
 
 {{end}}

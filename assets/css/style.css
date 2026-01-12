@@ -1,5 +1,4 @@
 /* Make HTML more responsive (adapted from https://github.com/mrmrs/fluidity) */
-img,
 canvas,
 iframe,
 video,
@@ -12,30 +11,6 @@ textarea {
 
 pre {
   overflow-x: auto;
-}
-
-/* Box-model fix (adapted from https://css-tricks.com/box-sizing/) */
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-html {
-  font-size: 1.125em;
-}
-
-body {
-  background-color: #f8f7fa;
-  color: #3d3c4f; 
-  margin: 0 auto;
-  max-width: 100%;
-  padding: 0.3em;
-  font-family: 'Times New Roman', Times, serif;
 }
 
 p {
@@ -66,29 +41,10 @@ th {
   padding-bottom: 1em;
 }
 
-.pixel {
-  image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: crisp-edges;
-}
-
-header {
-  max-width: 100%;
-  margin-bottom: 0.6em;
-}
-
-footer {
-  margin-bottom: 0.2em;
-}
-
 hr {
   margin-top: 3em;
   border: none;
   border-top: #dfd9ec 1px solid;
-}
-
-.post-list {
-  list-style-type: none;
 }
 
 table {
@@ -183,6 +139,18 @@ blockquote {
 .container > img {
   max-width: 100%;
   margin-bottom: 4em;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 2em;
+}
+
+.flex-item {
+  padding: 1em;
+  max-width: 20em;
 }
 
 @media screen and (width <=50rem) {

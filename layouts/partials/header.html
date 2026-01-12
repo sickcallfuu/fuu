@@ -1,7 +1,7 @@
 <header>
     {{ with resources.Get "images/turtle.png" }}
     {{ with .Resize "20x" }}
-      <a href="/"><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"></a>
+      <a href="/"><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="pixel"></a>
     {{ end }}
     {{ end }}
     {{ partial "breadcrumbs.html" . }}

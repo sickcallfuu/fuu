@@ -1,6 +1,6 @@
 ---
 title: "updates"
-type: art
+type:
 categories:
 rss_ignore: false
 draft: false

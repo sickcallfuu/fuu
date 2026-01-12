@@ -1,0 +1,16 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+<figure>
+  {{- $imageCdn := .Site.Params.imageCdn -}}
+  {{- $collection := .RelPermalink -}}
+  {{- $src := printf "%s%s%s" (strings.TrimSuffix "/" $imageCdn) (strings.TrimSuffix "/" .RelPermalink) ".jpg" -}}
+  <img src="{{ $src }}" {{ with try (resources.GetRemote $src) }}{{ with .Value }} width="{{ .Width }}"
+    height="{{ .Height }}" {{ end }}{{ end }}>
+</figure>
+
+{{with .PrevInSection}}<p>previous: <i><a href="{{.RelPermalink}}">{{.Title}}</a></i>{{end}} / 
+{{with .NextInSection}}next: <i><a href="{{.RelPermalink}}">{{.Title}}</a></i></p>{{end}}
+
+
+{{ end }}

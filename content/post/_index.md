@@ -1,6 +1,6 @@
 ---
 title: blog
-type: post
+type:
 rss_ignore: false
 draft: false
 weight: 10
