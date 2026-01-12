@@ -12,7 +12,7 @@
 {{ with .Resources.GetMatch "**" }}
 {{ $alt := printf "icon: %s" $p.Title }}
 <a href="{{ $p.RelPermalink }}">
-    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="pixel" alt="{{ $alt }}"></a>
+    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="pixel2" alt="{{ $alt }}"></a>
 {{ end }}
 {{ end }}
 
