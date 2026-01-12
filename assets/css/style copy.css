@@ -66,6 +66,15 @@ th {
   padding-bottom: 1em;
 }
 
+time {
+  font-family: monospace;
+}
+
+.postmeta {
+  font-family: monospace;
+  list-style-type: none;
+}
+
 .pixel {
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
