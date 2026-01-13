@@ -6,7 +6,7 @@
   {{- $collection := .RelPermalink -}}
   {{- $src := printf "%s%s%s" (strings.TrimSuffix "/" $imageCdn) (strings.TrimSuffix "/" .RelPermalink) ".jpg" -}}
   <img src="{{ $src }}" {{ with try (resources.GetRemote $src) }}{{ with .Value }} width="{{ .Width }}"
-    height="{{ .Height }}" {{ end }}{{ end }}>
+    height="{{ .Height }}" alt="fullsize screenshot"{{ end }}{{ end }}>
 </figure>
 
 {{with .NextInSection}}<p><i>previous: <a href="{{.RelPermalink}}">{{.Title}}</a></i>,</p>{{end}} 

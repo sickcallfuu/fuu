@@ -1,8 +1,6 @@
 <header>
     {{ with resources.Get "images/turtle.png" }}
-    {{ with .Resize "20x" }}
-      <a href="/"><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="pixel"></a>
-    {{ end }}
+      <a href="/"><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="pixel" alt="turtle talisman"></a>
     {{ end }}
     {{ partial "breadcrumbs.html" . }}
 
